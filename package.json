@@ -1,0 +1,76 @@
+{
+  "name": "esri-calcite-vue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/esri-calcite-vue.ssr.js",
+  "browser": "dist/esri-calcite-vue.esm.js",
+  "module": "dist/esri-calcite-vue.esm.js",
+  "unpkg": "dist/esri-calcite-vue.min.js",
+  "types": "esri-calcite-vue.d.ts",
+  "files": [
+    "dist/*",
+    "esri-calcite-vue.d.ts",
+    "src/**/*.vue"
+  ],
+  "sideEffects": false,
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "scripts": {
+    "serve": "vue-cli-service serve dev/main.ts",
+    "build-test-app": "vue-cli-service build --dest app-dist dev/main.ts",
+    "build": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+    "build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
+    "build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
+    "build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife"
+  },
+  "dependencies": {
+    "@esri/calcite-components": "^1.0.0-beta.52",
+    "@esri/calcite-ui-icons": "^3.15.2",
+    "vue-class-component": "^7.2.6"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-proposal-class-properties": "^7.13.0",
+    "@babel/plugin-proposal-decorators": "^7.13.5",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.12.7",
+    "@rollup/plugin-alias": "^3.1.1",
+    "@rollup/plugin-babel": "^5.2.2",
+    "@rollup/plugin-commonjs": "^17.0.0",
+    "@rollup/plugin-node-resolve": "^11.0.1",
+    "@rollup/plugin-replace": "^2.3.4",
+    "@stencil/webpack": "0.0.6",
+    "@types/arcgis-js-api": "^4.18.0",
+    "@vue/cli-plugin-babel": "^4.5.10",
+    "@vue/cli-plugin-typescript": "^4.5.10",
+    "@vue/cli-service": "^4.5.10",
+    "@vue/compiler-sfc": "^3.0.5",
+    "@webcomponents/webcomponentsjs": "^2.5.0",
+    "autoprefixer": "^10.2.5",
+    "calcite-web": "github:Esri/calcite-web#v1.2.5",
+    "copy-webpack-plugin": "^6.4.1",
+    "cross-env": "^7.0.3",
+    "esri-loader": "^3.0.0",
+    "minimist": "^1.2.5",
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.3",
+    "rollup": "^2.36.1",
+    "rollup-plugin-postcss": "^4.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-vue": "^6.0.0",
+    "sass-loader": "^10.1.1",
+    "typescript": "^3.8.3",
+    "vue": "^3.0.5",
+    "vue-property-decorator": "^9.1.2"
+  },
+  "peerDependencies": {
+    "calcite-web": "github:Esri/calcite-web",
+    "vue": "^3.0.5"
+  },
+  "engines": {
+    "node": ">=12"
+  }
+}

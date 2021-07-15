@@ -1,0 +1,19 @@
+{
+  "name": "esri-calcite-vue",
+  "version": "0.0.1",
+  "description": "vue bindings for the esri calcite component library",
+  "main": "index.js",
+  "authors": {
+    "name": "Caleb Mackey",
+    "email": "caleb.mackey@gmail.com"
+  },
+  "repository": "/esri-calcite-vue",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "vuepress": "^1.5.3"
+  }
+}
